@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url(./wp2844805.jpg)
+    no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .container {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--color-sec);
+  border-radius: 0 0 5rem 5rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+input {
+  width: 50%;
+  border-radius: 1rem 0 1rem 0;
+  margin-right: 3px;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+ button:hover {
+  border: 1px solid #fff;
+} 
+
+section .container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+.songs {
+  width: 45%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.songs li {
+  font-size: 2rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  color: white;
+}
+
+#text{
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+
+}
+#text h1{
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid white;
+}
+
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+#spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+
+.hidden {
+  display: none;
+}
