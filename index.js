@@ -19,18 +19,21 @@ const renderList = (list) => {
 function searchList() {
   const search = document.getElementById("search").value;
   if (!search) {
+    // document.getElementById("lyrics").innerHTML = '';
     document.getElementById("text").innerText="Please Enter....Nothing to search";
   } else {
     fetch("https://api.lyrics.ovh/suggest/" + search)
       .then((response) => response.json())
       .then((data) => {
-         if (data.data) {
+         if (data.data?.length) {
           renderList(data.data);
          } else {
+          document.getElementById("lyrics").innerHTML = '';
           document.getElementById("text").innerText="OOps no result found !!!";
          }
         
-      }).catch(error => {
+      }).catch(() => {
+        document.getElementById("lyrics").innerHTML = '';
         document.getElementById("text").innerText="OOps no result found !!!";
       });
   }
